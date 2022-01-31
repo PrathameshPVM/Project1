@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+    <title>Dashboard | Admin</title>
+</head>
+
+<body>
+    <!-- nav start -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2"></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Puja <br> Administrator</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Profile</a></li>
+                    <li><a class="dropdown-item" href="signup.html">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+
+    </div>
+    <!-- nav end -->
+    <nav align=center style="background: #001a33;color: white;font-size: 25px;padding: 10px;">
+        Lead
+    </nav>
+    <!-- slide bar -->
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+            <div class="title">
+
+            </div>
+            <ul class="list-items">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-sliders-h"></i>Master Setup</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="courses.html">Courses </a></li>
+                        <li><a class="dropdown-item" href="discounts.html">Discounts</a></li>
+                        <li><a class="dropdown-item" href="fees.html">Fees</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-address-book"></i>Users</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newuser.html">New User </a></li>
+                        <li><a class="dropdown-item" href="viewusers.html">View Users</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-stream"></i>Leads</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newlead.html">New Lead </a></li>
+                        <li><a class="dropdown-item" href="viewleads.html">View Leads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-asia"></i>Admissions</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newadmission.html">New Admission </a></li>
+                        <li><a class="dropdown-item" href="viewadmissions.html">View Admissions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-envelope"></i>Anouncements</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newanouncement.html">New Anouncement </a></li>
+                        <li><a class="dropdown-item" href="viewanouncemts.html">View Anouncements</a></li>
+                    </ul>
+                </li>
+
+    </div>
+    </ul>
+    </nav>
+    </div>
+    <!-- slide bar end -->
+    <!-- Content -->
+    <div style="width: 78%;margin-left: 306px;background-color: white;padding: 20px;margin-top: 40px;border-radius: 10px;">
+        <h3>Lead Details</h3>
+        <hr>
+        <!-- table -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Center</label> <select data-plugin-selectTwo class="form-control">
+                            <optgroup label="Center">
+                                <option value="C1">Center 1</option>
+                                <option value="C2">Center 2</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Course(s) interested in</label> <input name="tags" id="tags-input" data-role="tagsinput" data-tag-class="label label-primary" class="form-control" value="IELTS, PTE, MBA, TOEFL" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Source</label> <select data-plugin-selectTwo class="form-control">
+                            <optgroup label="Source">
+                                <option value="WEBSITE">Website</option>
+                                <option value="HOARDING">Hoarding</option>
+                                <option value="NEWSPAPER">News Paper</option>
+                                <option value="DIGITALAD">Digital Ad</option>
+                                <option value="PHONE">Phone</option>
+                                <option value="FRIENDS">Friends</option>
+                                <option value="OTHER">Other</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+
+                        <label class="control-label">Description</label> <input type="text" class="form-control" placeholder="Why should you choose this program">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">First Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label">Middle Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label">Date of Birth</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="form-group">
+                        <label class="control-label">Sex</label>
+                        <div class="input-group">
+                            <select class="form-control" id="salesSelector">
+                                <option value="M" selected>M</option>
+                                <option value="F">F</option>
+                                <option value="O">O</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="control-label">Address</label> <input type="text" class="form-control">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">City</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label class="control-label">State</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Mobile #</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Alternate #</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Email Id</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+        <button type="button" class="mb-xs mt-xs mr-xs btn btn-primary">Submit</button>
+    </div>
+    <!-- tableend -->
+    </div>
+
+    <!-- Contentend -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

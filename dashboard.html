@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <a href="https://icons8.com/icon/Oyh4DCshbhyf/add-user-male"></a>
+    <title>Dashboard | Admin</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+</head>
+
+<body>
+    <!-- nav start -->
+    <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#"></a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2"></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Puja <br> Administrator</a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#scrollspyHeading3">Profile</a></li>
+                    <li><a class="dropdown-item" href="signup.html">Log Out</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+
+    </div>
+    <!-- nav end -->
+    <nav align=center style="background: #001a33;color: white;font-size: 25px;padding: 10px;">
+        Dashboard
+    </nav>
+    <!-- slide bar -->
+    <div class="wrapper">
+        <input type="checkbox" id="btn" hidden>
+        <label for="btn" class="menu-btn">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+        </label>
+        <nav id="sidebar">
+            <div class="title">
+
+            </div>
+            <ul class="list-items">
+                <li><a href="dashboard.html"><i class="fas fa-home"></i>Dashboard</a></li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-sliders-h"></i>Master Setup</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="courses.html">Courses </a></li>
+                        <li><a class="dropdown-item" href="discounts.html">Discounts</a></li>
+                        <li><a class="dropdown-item" href="fees.html">Fees</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-address-book"></i>Users</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newuser.html">New User </a></li>
+                        <li><a class="dropdown-item" href="viewusers.html">View Users</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-stream"></i>Leads</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newlead.html">New Lead </a></li>
+                        <li><a class="dropdown-item" href="viewleads.html">View Leads</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-globe-asia"></i>Admissions</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newadmission.html">New Admission </a></li>
+                        <li><a class="dropdown-item" href="viewadmissions.html">View Admissions</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-envelope"></i>Anouncements</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" style="background-color: #001a33;">
+                        <li><a class="dropdown-item" href="newanouncement.html">New Anouncement </a></li>
+                        <li><a class="dropdown-item" href="viewanouncemts.html">View Anouncements</a></li>
+                    </ul>
+                </li>
+
+    </div>
+    </ul>
+    </nav>
+    </div>
+    <!-- slide bar end -->
+    <!-- content -->
+    <canvas id="myChart" style="width:100%;max-width:1222px;height: 372px;margin-left: 288px;margin-top: 26px;"></canvas>
+    <script>
+        var xValues = ["jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var yValues = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15, 15, 16];
+
+        new Chart("myChart", {
+            type: "line",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    fill: false,
+                    lineTension: 0,
+                    backgroundColor: "rgba(0,0,255,1.0)",
+                    borderColor: "rgba(0,0,255,0.1)",
+                    data: yValues
+                }]
+            },
+            options: {
+                legend: {
+                    display: false
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            min: 6,
+                            max: 16
+                        }
+                    }],
+                }
+            }
+        });
+    </script>
+    <div style="width:100%;max-width:1222px;height: 372px;margin-left: 288px;margin-top: 26px;">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="col">
+                <div class="card" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <img style="float: left;width: 90px;height: 90px;" src="https://img.icons8.com/fluency/48/000000/add-user-male.png" />
+                        <div style="float: left;margin-left: 10px;">
+                            <h5>New Leads</h5>
+                            <h2>25</h2>(14 unread)
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <img style="float: left;width: 90px;height: 90px;" src="https://img.icons8.com/fluency/48/000000/us-dollar-circled.png" />
+                        <div style="float: left;margin-left: 10px;">
+                            <h5>Total Revenue (this month)</h5>
+                            <h2>14,890.30</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <img style="float: left;width: 90px;height: 90px;" src="https://img.icons8.com/fluency/48/000000/add-list.png" />
+                        <div style="float: left;margin-left: 10px;">
+                            <h5>Open Leads</h5>
+                            <h2>38</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="border-radius: 16px;">
+                    <div class="card-body">
+                        <img style="float: left;width: 90px;height: 90px;" src="https://img.icons8.com/fluency/48/000000/checked-user-male.png" />
+                        <div style="float: left;margin-left: 10px;">
+                            <h5>Total Admissions (this month)</h5>
+                            <h2>3765</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Table -->
+        <div style="margin-top: 20px;">
+            <h2>Class Statistics</h2>
+            <hr>
+            <div class="panel-body" style="border: 2px solid;">
+                <div class="table-responsive">
+                    <table class="table table-striped mb-none">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Student</th>
+                                <th>Course</th>
+                                <th>Completion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Rahul Sirohi</td>
+                                <td>IELTS</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Rupa Acharya</td>
+                                <td>PTE</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">100%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Ramesh Gupta</td>
+                                <td>PTE</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">60%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Tushar Singh</td>
+                                <td>PTE</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">90%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Jairam Thote</td>
+                                <td>MBA</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">45%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Rupal Jaju</td>
+                                <td>MBA</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded m-none mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">40%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Ramesh Siddham</td>
+                                <td>MBA</td>
+                                <td>
+                                    <div class="progress progress-sm progress-half-rounded mt-xs light">
+                                        <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 95%;">95%</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- Table end -->
+    </div>
+
+
+
+
+    </div>
+    <!-- content end -->
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+</body>
+
+</html>
